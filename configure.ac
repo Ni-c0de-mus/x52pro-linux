@@ -23,15 +23,5 @@ AC_SUBST([LIBUSB_LIBS])
 AC_SUBST([X52_PKG_VERSION], [0.1])
 AC_SUBST([X52_INCLUDE], ["-I \$(top_srcdir)/lib/libx52"])
 
-AC_CONFIG_FILES([
-    Makefile
-    lib/Makefile
-    lib/libx52/Makefile
-    lib/libusbx52/Makefile
-    lib/libx52util/Makefile
-    utils/Makefile
-    utils/cli/Makefile
-    utils/test/Makefile
-    tests/Makefile
-])
+AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
