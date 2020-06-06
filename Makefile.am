@@ -31,7 +31,16 @@ if HAVE_DOXYGEN
 DXGEN = $(DXGEN_@AM_V@)
 DXGEN_ = $(DXGEN_@AM_DEFAULT_V@)
 DXGEN_0 = @printf "  DXGEN    $<\n";
+CLONE = $(CLONE_@AM_V@)
+CLONE_ = $(CLONE_@AM_DEFAULT_V@)
+CLONE_0 = @printf "  CLONE    gh-pages\n"; 
 docs/.stamp: Doxyfile
+if HAVE_GIT
+	$(AM_V_at)rm -rf $(top_builddir)/docs/html	
+	$(AM_V_at)$(MKDIR_P) $(top_builddir)/docs
+	$(CLONE)$(GIT) clone https://github.com/nirenjan/x52pro-linux.git \
+		-b gh-pages -q $(top_builddir)/docs/html
+endif
 	$(DXGEN)$(DOXYGEN) $<
 	$(AM_V_at)touch $@
 

@@ -12,6 +12,7 @@ AC_PROG_CC
 AC_PROG_CC_STDC
 AC_PROG_AWK
 AM_PROG_AR
+AC_PROG_MKDIR_P
 AM_PATH_PYTHON([2.6])
 LT_INIT
 PKG_PROG_PKG_CONFIG
@@ -60,6 +61,11 @@ AM_CONDITIONAL([HAVE_DOXYGEN], [test -n "$DOXYGEN"])
 AM_COND_IF([HAVE_DOXYGEN],
     [AC_CONFIG_FILES([Doxyfile])],
     [AC_MSG_WARN(["Doxygen not found; continuing without doxygen support"])])
+# Git for pushing to gh-pages
+AC_CHECK_PROGS([GIT], [git])
+AM_CONDITIONAL([HAVE_GIT], [test -n "$GIT"])
+AM_COND_IF([HAVE_GIT],,
+    [AC_MSG_NOTICE(["git not found; will not auto-update gh-pages branch"])])
 
 # Configuration headers
 AC_CONFIG_HEADERS([config.h])
