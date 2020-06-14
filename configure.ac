@@ -84,6 +84,7 @@ AC_CONFIG_FILES([ po/Makefile.in
     utils/Makefile
     utils/cli/Makefile
     utils/test/Makefile
+    daemon/Makefile
     tests/Makefile
 ])
 AC_OUTPUT
