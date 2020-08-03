@@ -52,6 +52,10 @@ AC_SUBST([HIDAPI_CFLAGS])
 AC_SUBST([HIDAPI_LDFLAGS])
 AC_SUBST([HIDAPI_LIBS])
 
+# Check for libevdev
+AM_COND_IF([LINUX],
+    [AX_PKG_CHECK_MODULES([EVDEV], [libevdev])])
+
 # Check for pthreads
 ACX_PTHREAD
 
