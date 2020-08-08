@@ -104,6 +104,7 @@ AC_CONFIG_HEADERS([config.h])
 
 AC_CONFIG_FILES([ po/Makefile.in
     Makefile
+    driver/Makefile
     lib/Makefile
     lib/libx52/Makefile
     lib/libx52/libx52.pc

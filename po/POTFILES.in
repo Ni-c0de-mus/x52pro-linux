@@ -10,3 +10,5 @@ utils/test/x52_test_clock.c
 utils/test/x52_test_common.h
 utils/test/x52_test_led.c
 utils/test/x52_test_mfd.c
+
+driver/logging.c

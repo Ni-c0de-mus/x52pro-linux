@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: x52pro-linux 0.2.1\n"
 "Report-Msgid-Bugs-To: https://github.com/nirenjan/x52pro-linux/issues\n"
-"POT-Creation-Date: 2020-07-16 04:24-0700\n"
+"POT-Creation-Date: 2020-08-07 15:38-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -368,4 +368,28 @@ msgstr ""
 
 #: utils/test/x52_test_mfd.c:96
 msgid "OK"
+msgstr ""
+
+#: driver/logging.c:28
+msgid "FATAL"
+msgstr ""
+
+#: driver/logging.c:29
+msgid "CRITICAL"
+msgstr ""
+
+#: driver/logging.c:30
+msgid "ERROR"
+msgstr ""
+
+#: driver/logging.c:31
+msgid "WARNING"
+msgstr ""
+
+#: driver/logging.c:32
+msgid "INFO"
+msgstr ""
+
+#: driver/logging.c:33
+msgid "DEBUG"
 msgstr ""

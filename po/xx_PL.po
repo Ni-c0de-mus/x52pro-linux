@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: x52pro-linux 0.2.1\n"
 "Report-Msgid-Bugs-To: https://github.com/nirenjan/x52pro-linux/issues\n"
-"POT-Creation-Date: 2020-07-16 04:24-0700\n"
-"PO-Revision-Date: 2020-07-13 18:05-0700\n"
+"POT-Creation-Date: 2020-08-07 15:38-0700\n"
+"PO-Revision-Date: 2020-08-05 18:39-0700\n"
 "Last-Translator: Nirenjan Krishnan <nirenjan@gmail.com>\n"
 "Language-Team: Dummy Language for testing i18n\n"
 "Language: xx_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4\n"
 
 #: lib/libx52/x52_strerror.c:25 lib/libx52io/io_strings.c:104
 msgid "Success"
@@ -412,3 +412,27 @@ msgstr "Estingtay aracterchay 0x%02x..."
 #: utils/test/x52_test_mfd.c:96
 msgid "OK"
 msgstr "OKay"
+
+#: driver/logging.c:28
+msgid "FATAL"
+msgstr "ATALFAY"
+
+#: driver/logging.c:29
+msgid "CRITICAL"
+msgstr "ITICALCRAY"
+
+#: driver/logging.c:30
+msgid "ERROR"
+msgstr "ERRORAY"
+
+#: driver/logging.c:31
+msgid "WARNING"
+msgstr "ARNINGWAY"
+
+#: driver/logging.c:32
+msgid "INFO"
+msgstr "INFOWAY"
+
+#: driver/logging.c:33
+msgid "DEBUG"
+msgstr "EBUGDAY"
