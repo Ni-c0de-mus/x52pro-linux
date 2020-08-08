@@ -46,6 +46,7 @@ static const bool log_level_show_line[] = {
     true, false, false, false, false, true
 };
 
+__attribute__((format(__printf__, 4, 5)))
 void drv_log_msg(int loglevel, const char *file, int line, const char * fmt, ...)
 {
     if (loglevel <= sys_log_level) {
