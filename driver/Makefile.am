@@ -11,9 +11,10 @@ bin_PROGRAMS = x52drv
 # X52 driver program
 # This program reads and parses the raw events from the joystick, and
 # converts them into input events (Linux only)
-x52drv_SOURCES = main.c logging.c
+x52drv_SOURCES = main.c logging.c config.c
 x52drv_CFLAGS = \
 	-I $(top_srcdir)/lib/libx52io \
+	-I $(top_srcdir)/lib/libx52 \
 	-I $(top_srcdir) \
 	-DLOCALEDIR=\"$(localedir)\" \
 	-DSYSCONFDIR=\"$(sysconfdir)\" \
@@ -24,4 +25,5 @@ x52drv_LDFLAGS = $(WARN_LDFLAGS)
 x52drv_LDADD = ../lib/libx52io/libx52io.la
 
 EXTRA_DIST = \
+	drv_config.h \
 	logging.h

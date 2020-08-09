@@ -32,6 +32,7 @@ and critical - critical errors usually terminate the process
 
 #include "gettext.h"
 #include "logging.h"
+#include "drv_config.h"
 
 int main(int argc, char **argv)
 {
@@ -44,24 +45,8 @@ int main(int argc, char **argv)
 
     drv_log_init(NULL);
     drv_log_set_loglevel(LOG_LEVEL_MAX);
-    drv_log_set_flags(LOG_FLAG_DATE | LOG_FLAG_TIME | LOG_FLAG_COLORS | LOG_FLAG_UTC);
+    drv_log_set_flags(LOG_FLAG_COLORS);
 
-    LOG_CRIT("critical message");
-    LOG_ERR("error message");
-    LOG_WARN("warning message");
-    LOG_INFO("info message");
-    LOG_DEBUG("debug message");
-
-    drv_log_set_flags(LOG_FLAG_DATE | LOG_FLAG_TIME | LOG_FLAG_COLORS);
-
-    LOG_CRIT("critical message");
-    LOG_ERR("error message");
-    LOG_WARN("warning message");
-    LOG_INFO("info message");
-    LOG_DEBUG("debug message");
-
-
-    LOG_FATAL("Aieeee!!!!");
-
+    drv_config_load(argv[1]);
     return 0;
 }
